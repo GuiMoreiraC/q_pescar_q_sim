@@ -54,15 +54,41 @@ CREATE TABLE localidade (
 DROP TABLE IF EXISTS peixe;
 CREATE TABLE peixe (
     id_peixe int NOT NULL AUTO_INCREMENT,
-    id_estacao int NOT NULL,
-    id_clima int NOT NULL,
-    id_localidade int NOT NULL,
     nome varchar(255) NOT NULL,
     tamanho varchar(255) NOT NULL,
-    PRIMARY KEY (id_peixe),
-    FOREIGN KEY (id_estacao) REFERENCES estacao(id_estacao),
-    FOREIGN KEY (id_clima) REFERENCES clima (id_clima),
-    FOREIGN KEY (id_localidade) REFERENCES localidade(id_localidade)
+    PRIMARY KEY (id_peixe)
+);
+    
+-- N : N - peixes
+DROP TABLE IF EXISTS peixeEstacao;
+CREATE TABLE peixeEstacao (
+    id_peixeEstacao int NOT NULL AUTO_INCREMENT,
+	id_peixe int NOT NULL,
+	id_estacao int NOT NULL,
+    PRIMARY KEY (id_peixeEstacao),
+    FOREIGN KEY (id_peixe) REFERENCES peixe (id_peixe),
+	FOREIGN KEY (id_estacao) REFERENCES estacao (id_estacao)
+
+);
+
+DROP TABLE IF EXISTS peixeClima;
+CREATE TABLE peixeClima (
+    id_peixeClima int NOT NULL AUTO_INCREMENT,
+    id_peixe int NOT NULL,
+    id_clima int NOT NULL,
+    PRIMARY KEY (id_peixeClima),
+	FOREIGN KEY (id_peixe) REFERENCES peixe (id_peixe),
+	FOREIGN KEY (id_clima) REFERENCES clima (id_clima)
+);
+
+DROP TABLE IF EXISTS peixeLocalidade;
+CREATE TABLE peixeLocalidade (
+    id_peixeLocalidade int NOT NULL AUTO_INCREMENT,
+    id_peixe int NOT NULL,
+    id_localidade int NOT NULL,
+    PRIMARY KEY (id_peixeLocalidade),
+	FOREIGN KEY (id_peixe) REFERENCES peixe (id_peixe),
+    FOREIGN KEY (id_localidade) REFERENCES localidade (id_localidade)
 );
 
 -- Equipamento
