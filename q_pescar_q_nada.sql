@@ -8,14 +8,43 @@ USE PescaERia;
 -- User
 DROP TABLE IF EXISTS endereco;
 CREATE TABLE endereco (
-    id_endereco int NOT NULL AUTO_INCREMENT,
-    cidade varchar(255) NOT NULL,
-    rua varchar(255) NOT NULL,
+    id_endereco int NOT NULL auto_increment,
+    pais varchar(60) NOT NULL,
+    estado varchar(80) NOT NULL,
+    cidade varchar(80) NOT NULL,
+    bairro varchar(80) NOT NULL,
+    rua varchar(100) NOT NULL,
     cep int NOT NULL,
     numero int,
     complemento varchar(255),
     PRIMARY KEY (id_endereco)
 );
+insert into endereco (pais, estado, cidade, bairro, rua, cep, numero, complemento)
+    values('Brasil', 'Santa Catarina', 'Icara', 'Presidente Vargas', 'Anitta Garibalde', '88820000', '7', 'Casa azul');
+    insert into endereco (pais, estado, cidade, bairro, rua, cep, numero, complemento)
+    values('Argentina', 'Patagonia', 'Buenos Aires', 'Hermano', 'Manito', '81840000', '71', 'Casa ');
+    insert into endereco (pais, estado, cidade, bairro, rua, cep, numero, complemento)
+    values('Brasil', 'Paraiba', 'Criciuma', 'Presidente Lutor', 'Alfredo Bascoal', '88820015', '17', 'apt 143');
+    insert into endereco (pais, estado, cidade, bairro, rua, cep, numero, complemento)
+    values('Brasil', 'Roraima', 'Biridin', 'Cataratas azuis', 'Dom Pedro 1', '15420100', '14', 'ao lado do colegio');
+    insert into endereco (pais, estado, cidade, bairro, rua, cep, numero, complemento)
+    values('Chile', 'Dolado', 'Machu Pichu', 'Maias', 'Tribus', '96420000', '1', 'Casa de esquina');
+    insert into endereco (pais, estado, cidade, bairro, rua, cep, numero, complemento)
+    values('Uruguai', 'Jhambo', 'Da boa', 'Verdinha', 'cultivo', '420000420', null, 'Sem muro');
+    insert into endereco (pais, estado, cidade, bairro, rua, cep, numero, complemento)
+    values('Brasil', 'Sao Paulo', 'Sao Paulo', 'Presidente Vargas', 'Anitta Garibalde', '1455633256', '66', 'Buzine');
+    insert into endereco (pais, estado, cidade, bairro, rua, cep, numero, complemento)
+    values('Brasil', 'Parana', 'Curitiba', 'Presidente Vargas', 'Anitta Garibalde', '453546456', '134', '');
+    insert into endereco (pais, estado, cidade, bairro, rua, cep, numero, complemento)
+    values('Brasil', 'Rio Grande do Sul', 'Alegrete', 'Onde fica', 'Osvaldo Correa', '67532670', '987', 'janelas pretas');
+	insert into endereco (pais, estado, cidade, bairro, rua, cep, numero, complemento)
+    values('Brasil', 'Acre', 'Bom Jardim', 'Rio dio Rastro', 'Serrinha', '798073431', '657', 'Casa dois andares');
+	
+    update endereco set complemento = 'Estatua na frente' where id_endereco = 8;
+    
+    delete from endereco where id_endereco = 6;
+    
+    select * from endereco;
 
 DROP TABLE IF EXISTS usuario;
 CREATE TABLE usuario (
