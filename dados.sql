@@ -3,8 +3,9 @@ USE pescadorDeProcedures;
 -- Insersão de dados
 
 -- Tabelas de Usuario
-
-insert into endereco (pais, estado, cidade, bairro, rua, cep, numero, complemento) values
+INSERT INTO 
+	endereco (pais, estado, cidade, bairro, rua, cep, numero, complemento) 
+VALUES
     ('Brasil', 'Santa Catarina', 'Icara', 'Presidente Vargas', 'Anitta Garibalde', '88820000', '7', 'Casa azul'),    
     ('Argentina', 'Patagonia', 'Buenos Aires', 'Hermano', 'Manito', '81840000', '71', 'Casa '),    
     ('Brasil', 'Paraiba', 'Criciuma', 'Presidente Lutor', 'Alfredo Bascoal', '88820015', '17', 'apt 143'),    
@@ -15,12 +16,30 @@ insert into endereco (pais, estado, cidade, bairro, rua, cep, numero, complement
     ('Brasil', 'Parana', 'Curitiba', 'Presidente Vargas', 'Anitta Garibalde', '453546456', '134', ''),    
     ('Brasil', 'Rio Grande do Sul', 'Alegrete', 'Onde fica', 'Osvaldo Correa', '67532670', '987', 'janelas pretas'),	
     ('Brasil', 'Acre', 'Bom Jardim', 'Rio dio Rastro', 'Serrinha', '798073431', '657', 'Casa dois andares');
-	
-update endereco set complemento = 'Estatua na frente' where id_endereco = 8;
--- delete from endereco where id_endereco = 6;
--- select * from endereco;
 
-insert into usuario (nome , sobrenome , data_nsc , telefone, id_endereco) values
+-- Ver Informacoes
+SELECT * FROM endereco;
+
+-- Atualizar o id 8
+UPDATE endereco 
+SET complemento = 'Estatua na Frente' 
+WHERE id_endereco = 8;
+
+-- Ver Alteracoes
+SELECT * FROM endereco;
+
+/*
+-- Deletar ID 6
+DELETE FROM endereco
+WHERE id_endereco = 6;
+
+-- Ver Alteracoes
+SELECT * FROM endereco;
+*/
+
+INSERT INTO 
+	usuario (nome , sobrenome , data_nsc , telefone, id_endereco) 
+VALUES
     ('valdir', 'Santos', '1990-11-19', '61996657919', 1),
     ('valmir', 'pereira', '1985-11-11', '31996657919', 2),
     ('paulo', 'Santos', '1990-11-19', '26596487919', 3),
@@ -32,12 +51,31 @@ insert into usuario (nome , sobrenome , data_nsc , telefone, id_endereco) values
     ('DANI', 'SAfira', '1995-11-02', '11997657011', 9),
     ('DANIEL', 'holzts', '1999-11-02', '11997657023', 10);
 
--- delete from usuario where usuario = 4;
--- SELECT * FROM  usuario;
+-- Ver Informacoes
+SELECT * FROM usuario;
+
+-- Atualizar o id 6
+UPDATE usuario 
+SET telefone = '61997757352' 
+WHERE id_usuario = 6;
+
+-- Ver Alteracoes
+SELECT * FROM usuario;
+
+/*
+-- Deletar ID 4
+DELETE FROM usuario
+WHERE id_usuario = 4;
+
+-- Ver Alteracoes
+SELECT * FROM usuario;
+*/
+
    
 -- Tabelas de Equipamento
-   
-insert into varaPesca (modelo, marca, tamanho, cor, resistencia, valor) values
+INSERT INTO 
+	varaPesca (modelo, marca, tamanho, cor, resistencia, valor)
+VALUES
     ('C601H 1', 'Marine', '4', 'Azul', '20', '299.00'),
 	('C531H 4', 'Marine', '3', 'Rosa', '15', '150.00'),
 	('C531H 8', 'Marine', '5', 'Preta', '25', '340.00'),
@@ -49,11 +87,29 @@ insert into varaPesca (modelo, marca, tamanho, cor, resistencia, valor) values
 	('C589P 5', 'MarineKids', '2', 'Preta', '10', '99.00'),
 	('C934H 1', 'MarineKids', '2', 'Azul', '10', '110.00');
     
-update varaPesca set cor = 'Verde' where id_varaPesca = 7;
--- delete from varaPesca where id_varaPesca = 3;
--- select * from varaPesca;
+-- Ver Informacoes
+SELECT * FROM varaPesca;
+
+-- Atualizar o id 7
+UPDATE varaPesca 
+SET cor = 'Verde'
+WHERE id_varaPesca = 7;
+
+-- Ver Alteracoes
+SELECT * FROM varaPesca;
+
+/*
+-- Deletar ID 3
+DELETE FROM varaPesca
+WHERE id_varaPesca = 3;
+
+-- Ver Alteracoes
+SELECT * FROM varaPesca;
+*/
    
-insert into linha (modelo, marca, tamanho, cor, resistencia, valor) values
+INSERT INTO 
+	linha (modelo, marca, tamanho, cor, resistencia, valor)
+VALUES
     ('C101H 1', 'Marine', '250', 'Vermelha', '20', '80.00'),    
 	('C201H 1', 'Marine', '150', 'Rosa', '30', '60.00'),    
 	('C301H 1', 'Marine', '350', 'Verde', '35', '120.00'),    
@@ -65,11 +121,29 @@ insert into linha (modelo, marca, tamanho, cor, resistencia, valor) values
 	('C901H 1', 'Marine', '450', 'Azul', '10', '150.00'),    
 	('C001H 1', 'Marine', '150', 'Verde', '10', '60.00');
     
--- delete from linha where id_linha = 4;
-update linha set cor = 'Verde' where id_linha = 6;
-select * from linha;
+-- Ver Informacoes
+SELECT * FROM linha;
 
-insert into anzol (modelo, marca, tamanho, cor, resistencia, valor) values
+-- Atualizar o id 6
+UPDATE linha 
+SET cor = 'Verde'
+WHERE id_linha = 6;
+
+-- Ver Alteracoes
+SELECT * FROM linha;
+
+/*
+-- Deletar ID 4
+DELETE FROM linha
+WHERE id_linha = 4;
+
+-- Ver Alteracoes
+SELECT * FROM linha;
+*/
+
+INSERT INTO 
+	anzol (modelo, marca, tamanho, cor, resistencia, valor)
+VALUES
 	('C001A 1', 'Marine', '5', 'Preto', '10', '14.00'),    
 	('C001B 1', 'Marine', '4', 'Preto', '15', '9.00'),    
 	('C001C 1', 'Marine', '3', 'Preto', '20', '6.00'),    
@@ -80,12 +154,30 @@ insert into anzol (modelo, marca, tamanho, cor, resistencia, valor) values
 	('C001H 1', 'Marine', '8', 'Preto', '10', '7.00'),    
 	('C001I 1', 'Marine', '10', 'Preto', '35', '18.00'),    
 	('C001J 1', 'Marine', '5', 'Preto', '25', '5.00');
-    
-update anzol set cor = 'Preto' where id_anzol = 1;
--- delete from anzol where id_anzol = 2;
--- select * from anzol;
+
+-- Ver Informacoes
+SELECT * FROM anzol;
+
+-- Atualizar o id 1
+UPDATE anzol 
+SET cor = 'Preto'
+WHERE id_anzol = 1;
+
+-- Ver Alteracoes
+SELECT * FROM anzol;
+
+/*
+-- Deletar ID 2
+DELETE FROM anzol
+WHERE id_anzol = 2;
+
+-- Ver Alteracoes
+SELECT * FROM anzol;
+*/
    
-insert into iscas (modelo, marca, tamanho, cor, valor) values
+INSERT INTO 
+	iscas (modelo, marca, tamanho, cor, valor)
+VALUES
 	('A001J 1', 'Marine', '5', 'Preto', '20.00'),
 	('B001J 3', 'Marine', '6', 'Vermelho', '22.00'),
 	('C001J 1', 'Marine', '3', 'Verde', '7.00'),
@@ -96,34 +188,58 @@ insert into iscas (modelo, marca, tamanho, cor, valor) values
 	('H001J 1', 'Marine', '9', 'Rosa', '18.00'),
 	('I001J 9', 'Marine', '8', 'Cinza', '20.00'),
 	('J001J 1', 'Marine', '5', 'Preto', '16.00');
-    
-update iscas set tamanho = '14' where id_iscas = 9;
--- delete from iscas where id_iscas = 4;
--- select * from iscas;
+
+-- Ver Informacoes
+SELECT * FROM iscas;
+
+-- Atualizar o id 9
+UPDATE iscas 
+SET tamanho = '14'
+WHERE id_iscas = 9;
+
+-- Ver Alteracoes
+SELECT * FROM iscas;
+
+/*
+-- Deletar ID 4
+DELETE FROM iscas
+WHERE id_iscas = 4;
+
+-- Ver Alteracoes
+SELECT * FROM iscas;
+*/
 
 -- Tabelas de Peixes.
 
-INSERT INTO estacao (nome) VALUES
+INSERT INTO 
+	estacao (nome) 
+VALUES
     ('Primavera'),
     ('Verão'),
     ('Outono'),
     ('Inverno');
 
-INSERT INTO clima (nome) VALUES
+INSERT INTO 
+	clima (nome) 
+VALUES
     ('Sol'),
     ('Chuva'),
     ('Vento'),
     ('Tempestade'),
     ('Neve');
 
-INSERT INTO localidade (nome) VALUES
+INSERT INTO 
+	localidade (nome)
+VALUES
     ('Lago da Montanha '),
     ('Lago da Floresta'),
     ('Lagoa do Bosque'),
     ('Rio'),
     ('Oceano');
 
-INSERT INTO peixe (nome, tamanho) VALUES
+INSERT INTO 
+	peixe (nome, tamanho)
+VALUES
     ('Baiacu', '3-94'),
     ('Anchova', '3-43'),
     ('Atum', '30-155'),
@@ -134,6 +250,7 @@ INSERT INTO peixe (nome, tamanho) VALUES
     ('Peixe-sol', '13-41'),
     ('Cioba', '20-66')
     ('Linguado', '10-43');
+
 
 INSERT INTO peixeEstacao (id_peixe, id_estacao) VALUES
     (1, 2),
