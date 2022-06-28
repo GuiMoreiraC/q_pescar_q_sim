@@ -248,11 +248,13 @@ VALUES
     ('Achigã' , '28-79 '),
     ('Picão-verde', '25-104'),
     ('Peixe-sol', '13-41'),
-    ('Cioba', '20-66')
+    ('Cioba', '20-66'),
     ('Linguado', '10-43');
 
 
-INSERT INTO peixeEstacao (id_peixe, id_estacao) VALUES
+INSERT INTO
+	peixeEstacao (id_peixe, id_estacao)
+VALUES
     (1, 2),
     (2, 1), (2, 3),
     (3, 1), (3, 3),
@@ -264,7 +266,9 @@ INSERT INTO peixeEstacao (id_peixe, id_estacao) VALUES
     (9, 2), (9, 3), (9, 4),
     (10, 1), (10, 2);
 
-INSERT INTO peixeClima (id_peixe, id_clima) VALUES
+INSERT INTO 
+	peixeClima (id_peixe, id_clima)
+VALUES
     (1, 1),
     (2, 1), (2, 2), (2, 3), (2, 4), (2, 5),
     (3, 1), (3, 2), (3, 3), (3, 4), (3, 5),
@@ -276,7 +280,9 @@ INSERT INTO peixeClima (id_peixe, id_clima) VALUES
     (9, 2),
     (10, 1), (10, 2), (10, 3), (10, 4), (10, 5);
 
-INSERT INTO peixeLocalidade (id_peixe, id_localidade) VALUES
+INSERT INTO
+	peixeLocalidade (id_peixe, id_localidade)
+VALUES
     (1, 5),
     (2, 5),
     (3, 5),
@@ -288,12 +294,16 @@ INSERT INTO peixeLocalidade (id_peixe, id_localidade) VALUES
     (9, 5),
     (10, 5);
 
-INSERT INTO equipamento (id_varaPesca, id_linha, id_anzol, id_iscas) VALUES
+INSERT INTO
+	equipamento (id_varaPesca, id_linha, id_anzol, id_iscas)
+VALUES
 	(10,2,5,8), (5,7,3,4), (1,3,10,1), (7,8,1,9), (3,10,9,5),
     (3,10,3,10), (7,9,4,2), (8,2,8,3), (1,5,5,7), (1,2,2,6);
    
    
-INSERT INTO pescado (id_usuario, id_peixe, id_equipamento) VALUES
+INSERT INTO
+	pescado (id_usuario, id_peixe, id_equipamento)
+VALUES
     (1, 3, 4), (1, 5, 4), (1, 1, 4),
     (2, 6, 2), (2, 2, 2), (2, 2, 2),
     (3, 1, 3), (3, 1, 3),

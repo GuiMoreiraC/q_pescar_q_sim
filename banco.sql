@@ -15,7 +15,7 @@ CREATE TABLE endereco
     rua VARCHAR(100) NOT NULL,
     cep INT NOT NULL,
     numero INT NULL,
-    complemento VARCHAR(255) NULL,
+    complemento VARCHAR(150) NULL,
     PRIMARY KEY (id_endereco)
 );
 
@@ -23,25 +23,24 @@ CREATE TABLE endereco
 DROP TABLE IF EXISTS usuario;
 CREATE TABLE usuario 
 (
-
-    id_usuario INT NOT NULL AUTO_INCREMENT,
+    id_usuario INT UNSIGNED NOT NULL AUTO_INCREMENT,
     nome VARCHAR(50) NOT NULL,
     sobrenome VARCHAR(100) NOT NULL,
     data_nsc DATE NOT NULL,
     telefone VARCHAR(15) NOT NULL,
-	  PRIMARY KEY (id_usuario),
-	  id_endereco INT UNSIGNED NOT NULL,
+	PRIMARY KEY (id_usuario),
+	id_endereco INT UNSIGNED NOT NULL,
     CONSTRAINT FK_usuario_endereco_id_endereco
-		  FOREIGN KEY (id_endereco)
-      REFERENCES endereco (id_endereco)
+		FOREIGN KEY (id_endereco)
+		REFERENCES endereco (id_endereco)
 );
 
 -- Peixe
 DROP TABLE IF EXISTS estacao;
 CREATE TABLE estacao 
 (
-    id_estacao int NOT NULL AUTO_INCREMENT,
-    nome varchar(20) NOT NULL,
+    id_estacao INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(20) NOT NULL,
     PRIMARY KEY (id_estacao)
 );
 
@@ -49,25 +48,25 @@ DROP TABLE IF EXISTS clima;
 CREATE TABLE clima 
 (
 
-    id_clima int NOT NULL AUTO_INCREMENT,
-    nome varchar(20) NOT NULL,
+    id_clima INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(20) NOT NULL,
     PRIMARY KEY (id_clima)
 );
 
 DROP TABLE IF EXISTS localidade;
 CREATE TABLE localidade 
 (
-    id_localidade int NOT NULL AUTO_INCREMENT,
-    nome varchar(20) NOT NULL,
+    id_localidade INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(20) NOT NULL,
     PRIMARY KEY (id_localidade)
 );
 
 DROP TABLE IF EXISTS peixe;
 CREATE TABLE peixe 
 (
-    id_peixe int NOT NULL AUTO_INCREMENT,
-    nome varchar(50) NOT NULL,
-    tamanho varchar(10) NOT NULL,
+    id_peixe INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    tamanho VARCHAR(10) NOT NULL,
     PRIMARY KEY (id_peixe)
 );
     
@@ -123,7 +122,7 @@ DROP TABLE IF EXISTS varaPesca;
 CREATE TABLE varaPesca 
 (
     id_varaPesca INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    modelo varchar(255) NOT NULL,
+    modelo VARCHAR(255) NOT NULL,
     marca VARCHAR(100) NOT NULL,
     tamanho INT NOT NULL,
     cor VARCHAR(45) NOT NULL,
@@ -135,8 +134,8 @@ CREATE TABLE varaPesca
 DROP TABLE IF EXISTS linha;
 CREATE TABLE linha 
 (
-    id_linha int NOT NULL AUTO_INCREMENT,
-    modelo varchar(50) NOT NULL,
+    id_linha INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    modelo VARCHAR(50) NOT NULL,
     marca VARCHAR(50) NOT NULL,
     tamanho INT NOT NULL,
     cor VARCHAR(45) NOT NULL,
@@ -149,8 +148,8 @@ CREATE TABLE linha
 DROP TABLE IF EXISTS anzol;
 CREATE TABLE anzol 
 (
-    id_anzol int NOT NULL AUTO_INCREMENT,
-    modelo varchar(50) NOT NULL,
+    id_anzol INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    modelo VARCHAR(50) NOT NULL,
     marca VARCHAR(50) NOT NULL,
     tamanho INT NOT NULL,
     cor VARCHAR(45),
@@ -163,8 +162,8 @@ CREATE TABLE anzol
 DROP TABLE IF EXISTS iscas;
 CREATE TABLE iscas 
 (
-    id_iscas int NOT NULL AUTO_INCREMENT,
-    modelo varchar(50) NOT NULL,
+    id_iscas INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    modelo VARCHAR(50) NOT NULL,
     marca VARCHAR(50) NOT NULL,
     tamanho INT NOT NULL,
     cor VARCHAR(45) NOT NULL,
