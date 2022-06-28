@@ -17,9 +17,6 @@ VALUES
     ('Brasil', 'Rio Grande do Sul', 'Alegrete', 'Onde fica', 'Osvaldo Correa', '67532670', '987', 'janelas pretas'),	
     ('Brasil', 'Acre', 'Bom Jardim', 'Rio dio Rastro', 'Serrinha', '798073431', '657', 'Casa dois andares');
 
--- Ver Informacoes
-SELECT * FROM endereco;
-
 -- Atualizar o id 8
 UPDATE endereco 
 SET complemento = 'Estatua na Frente' 
@@ -50,9 +47,6 @@ VALUES
     ('DANIELa', 'BRAVO', '1998-11-02', '11997657251', 8),
     ('DANI', 'SAfira', '1995-11-02', '11997657011', 9),
     ('DANIEL', 'holzts', '1999-11-02', '11997657023', 10);
-
--- Ver Informacoes
-SELECT * FROM usuario;
 
 -- Atualizar o id 6
 UPDATE usuario 
@@ -86,9 +80,6 @@ VALUES
 	('C584H 4', 'MarineKids', '2', 'Vermelha', '10', '99.00'),
 	('C589P 5', 'MarineKids', '2', 'Preta', '10', '99.00'),
 	('C934H 1', 'MarineKids', '2', 'Azul', '10', '110.00');
-    
--- Ver Informacoes
-SELECT * FROM varaPesca;
 
 -- Atualizar o id 7
 UPDATE varaPesca 
@@ -120,9 +111,6 @@ VALUES
 	('C801H 1', 'Marine', '350', 'Branca', '40', '120.00'),    
 	('C901H 1', 'Marine', '450', 'Azul', '10', '150.00'),    
 	('C001H 1', 'Marine', '150', 'Verde', '10', '60.00');
-    
--- Ver Informacoes
-SELECT * FROM linha;
 
 -- Atualizar o id 6
 UPDATE linha 
@@ -155,12 +143,9 @@ VALUES
 	('C001I 1', 'Marine', '10', 'Preto', '35', '18.00'),    
 	('C001J 1', 'Marine', '5', 'Preto', '25', '5.00');
 
--- Ver Informacoes
-SELECT * FROM anzol;
-
 -- Atualizar o id 1
 UPDATE anzol 
-SET cor = 'Preto'
+SET cor = 'Branco'
 WHERE id_anzol = 1;
 
 -- Ver Alteracoes
@@ -188,9 +173,6 @@ VALUES
 	('H001J 1', 'Marine', '9', 'Rosa', '18.00'),
 	('I001J 9', 'Marine', '8', 'Cinza', '20.00'),
 	('J001J 1', 'Marine', '5', 'Preto', '16.00');
-
--- Ver Informacoes
-SELECT * FROM iscas;
 
 -- Atualizar o id 9
 UPDATE iscas 
