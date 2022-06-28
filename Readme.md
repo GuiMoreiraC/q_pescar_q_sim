@@ -8,11 +8,19 @@ Esse é o Projeto final de **Banco de Dados I** do curso CTD da Digital House.
 
 ### Usuário
 
+![Tabela_Usuário](imgs/tabela_user.png)
+
 ### Equipamentos
+
+![Tabela_Equipamentos](imgs/tabela_equip.png)
 
 ### Peixes
 
+![Tabela_Peixes](imgs/tabela_peixe.png)
+
 ### Pescado
+
+![Tabela_Pescado](imgs/tabela_pescado.png)
 
 # Conclusão
 
