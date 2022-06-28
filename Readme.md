@@ -48,9 +48,7 @@ Esse detalhes são importantes para um bom planejamento dos pescadores.
 
 </p>
 
-Por fim essa é a tabela de cadastro de pescado. Ela é onde todas as outras entidades se relacionam
-
-# Conclusão
+Por fim essa é a tabela de cadastro de pescado. Ela é onde todas as outras entidades se relacionam. Ela cadastra detalhes de cada peixe pescado.
 
 # Autores
 
@@ -71,3 +69,5 @@ Por fim essa é a tabela de cadastro de pescado. Ela é onde todas as outras ent
     <img src="https://avatars.githubusercontent.com/u/98671739?v=4" alt="DENNER SANTOS" title="DENNER SANTOS" width="150" style="border-radius: 100px"/>
   </a>
 </p>
+
+[easter egg](https://youtu.be/1kX9t-SZd38)
