@@ -4,6 +4,18 @@ Esse é o Projeto final de **Banco de Dados I** do curso CTD da Digital House.
 
 # Descrição do Projeto
 
+## Entidades Principais
+
+### Usuário
+
+### Equipamentos
+
+### Peixes
+
+### Pescado
+
+# Conclusão
+
 # Autores
 
 <p align="center">
