@@ -69,7 +69,7 @@ Por fim essa é a tabela de cadastro de pescado. Ela é onde todas as outras ent
     <img src="https://avatars.githubusercontent.com/u/98671739?v=4" alt="DENNER SANTOS" title="DENNER SANTOS" width="120" style="border-radius: 100px"/>
   </a>
   <a href="https://github.com/ItaloMGC">
-    <img src="https://avatars.githubusercontent.com/u/99700023?v=4" alt="DENNER SANTOS" title="DENNER SANTOS" width="120" style="border-radius: 100px"/>
+    <img src="https://avatars.githubusercontent.com/u/99700023?v=4" alt="DItalo" title="Italo" width="120" style="border-radius: 100px"/>
   </a>
 </p>
 
