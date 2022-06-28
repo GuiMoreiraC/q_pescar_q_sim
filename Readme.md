@@ -1,6 +1,8 @@
-# Descrição do Projeto
+# Introdução
 
 Esse é o Projeto final de **Banco de Dados I** do curso CTD da Digital House.
+
+# Descrição do Projeto
 
 # Autores
 
