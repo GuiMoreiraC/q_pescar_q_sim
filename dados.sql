@@ -1,4 +1,5 @@
 USE pescadorDeProcedures;
+
 -- Insersão de dados
 
 -- Tabelas de Usuario
@@ -142,9 +143,18 @@ INSERT INTO peixeLocalidade (id_peixe, id_localidade) VALUES
     (2, 2), (2, 3),
     (3, 1), (3, 2), (3, 3);
 
-SELECT p.nome, p.tamanho, l.nome  FROM peixe p
-INNER JOIN peixeLocalidade pl
-ON p.id_peixe = pl.id_peixe
-INNER JOIN localidade l
-ON pl.id_localidade  = pl.id_localidade;
-
+INSERT INTO equipamento (id_varaPesca, id_linha, id_anzol, id_iscas) VALUES
+	(1,2,3,4),(1,2,3,4),(1,2,3,4),(1,2,3,4);
+   
+   
+INSERT INTO pescado (id_usuario, id_peixe, id_equipamento) VALUES
+    (1, 2, 3),
+    (2, 2, 3),
+    (3, 2, 3),
+    (4, 2, 3),
+    (5, 2, 3),
+    (6, 2, 3),
+    (7, 2, 3),
+    (8, 2, 3),
+    (9, 2, 3),
+    (10, 2, 3);

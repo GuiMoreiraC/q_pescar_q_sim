@@ -1,6 +1,4 @@
 CREATE DATABASE IF NOT EXISTS pescadorDeProcedures;
--- DROP DATABASE pescadorDeProcedures;
-
 USE pescadorDeProcedures;
 
 -- Criação do banco de dados
@@ -26,8 +24,8 @@ DROP TABLE IF EXISTS usuario;
 CREATE TABLE usuario 
 (
     id_usuario INT NOT NULL AUTO_INCREMENT,
-    nome VARCHAR(255) NOT NULL,
-    sobrenome VARCHAR(255) NOT NULL,
+    nome VARCHAR(50) NOT NULL,
+    sobrenome VARCHAR(100) NOT NULL,
     data_nsc DATE NOT NULL,
     telefone VARCHAR(15) NOT NULL,
 	PRIMARY KEY (id_usuario),
@@ -42,7 +40,7 @@ DROP TABLE IF EXISTS estacao;
 CREATE TABLE estacao 
 (
     id_estacao int NOT NULL AUTO_INCREMENT,
-    nome varchar(255) NOT NULL,
+    nome varchar(20) NOT NULL,
     PRIMARY KEY (id_estacao)
 );
 
@@ -50,7 +48,7 @@ DROP TABLE IF EXISTS clima;
 CREATE TABLE clima 
 (
     id_clima int NOT NULL AUTO_INCREMENT,
-    nome varchar(255) NOT NULL,
+    nome varchar(20) NOT NULL,
     PRIMARY KEY (id_clima)
 );
 
@@ -58,7 +56,7 @@ DROP TABLE IF EXISTS localidade;
 CREATE TABLE localidade 
 (
     id_localidade int NOT NULL AUTO_INCREMENT,
-    nome varchar(255) NOT NULL,
+    nome varchar(20) NOT NULL,
     PRIMARY KEY (id_localidade)
 );
 
@@ -66,8 +64,8 @@ DROP TABLE IF EXISTS peixe;
 CREATE TABLE peixe 
 (
     id_peixe int NOT NULL AUTO_INCREMENT,
-    nome varchar(255) NOT NULL,
-    tamanho varchar(255) NOT NULL,
+    nome varchar(50) NOT NULL,
+    tamanho varchar(10) NOT NULL,
     PRIMARY KEY (id_peixe)
 );
     
@@ -136,8 +134,8 @@ DROP TABLE IF EXISTS linha;
 CREATE TABLE linha 
 (
     id_linha int NOT NULL AUTO_INCREMENT,
-    modelo varchar(255) NOT NULL,
-    marca VARCHAR(100) NOT NULL,
+    modelo varchar(50) NOT NULL,
+    marca VARCHAR(50) NOT NULL,
     tamanho INT NOT NULL,
     cor VARCHAR(45) NOT NULL,
     resistencia INT NOT NULL,
@@ -150,8 +148,8 @@ DROP TABLE IF EXISTS anzol;
 CREATE TABLE anzol 
 (
     id_anzol int NOT NULL AUTO_INCREMENT,
-    modelo varchar(255) NOT NULL,
-    marca VARCHAR(100) NOT NULL,
+    modelo varchar(50) NOT NULL,
+    marca VARCHAR(50) NOT NULL,
     tamanho INT NOT NULL,
     cor VARCHAR(45),
     resistencia INT NOT NULL,
@@ -164,8 +162,8 @@ DROP TABLE IF EXISTS iscas;
 CREATE TABLE iscas 
 (
     id_iscas int NOT NULL AUTO_INCREMENT,
-    modelo varchar(255) NOT NULL,
-    marca VARCHAR(100) NOT NULL,
+    modelo varchar(50) NOT NULL,
+    marca VARCHAR(50) NOT NULL,
     tamanho INT NOT NULL,
     cor VARCHAR(45) NOT NULL,
     valor DECIMAL (10,2),
