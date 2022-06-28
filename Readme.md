@@ -4,23 +4,46 @@ Esse é o Projeto final de **Banco de Dados I** do curso CTD da Digital House.
 
 # Descrição do Projeto
 
+Nosso projeto é um banco de dados que cadastra pescadores e detalhes de cada peixe pescado, com isso é possível criar um histórico de cada pescador e relacionando os detalhes é possível encontrar os melhores cenários para cada caso.
+
 ## Entidades Principais
 
 ### Usuário
 
+<p align="center">
+
 ![Tabela_Usuário](imgs/tabela_user.png)
+
+</p>
+
+Essas são as tabelas de cadastro de usuário.
 
 ### Equipamentos
 
+<p align="center">
+
 ![Tabela_Equipamentos](imgs/tabela_equip.png)
+
+</p>
+
+Essas são as tabelas de cadastro de equipamentos, cada item é descrito com seus atributos como marca, modelo, cor, tamanho e etc.
+O cadastro da tabela **Equipamentos** é relacionada é cada pesca, assim podemos ver os detalhes dos equipamentos utilizados em cada cenário.
 
 ### Peixes
 
+<p align="center">
+
 ![Tabela_Peixes](imgs/tabela_peixe.png)
+
+</p>
 
 ### Pescado
 
+<p align="center">
+
 ![Tabela_Pescado](imgs/tabela_pescado.png)
+
+</p>
 
 # Conclusão
 
