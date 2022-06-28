@@ -37,6 +37,9 @@ O cadastro da tabela **Equipamentos** é relacionada é cada pesca, assim podemo
 
 </p>
 
+Essas são as tabelas de cadastro de peixes. Cada peixe tem suas particularidades como seus tamanhos possíveis, regiões onde são comuns e climas em que são mais prováveis de serem encontrados.
+Esse detalhes são importantes para um bom planejamento dos pescadores.
+
 ### Pescado
 
 <p align="center">
@@ -44,6 +47,8 @@ O cadastro da tabela **Equipamentos** é relacionada é cada pesca, assim podemo
 ![Tabela_Pescado](imgs/tabela_pescado.png)
 
 </p>
+
+Por fim essa é a tabela de cadastro de pescado. Ela é onde todas as outras entidades se relacionam
 
 # Conclusão
 
