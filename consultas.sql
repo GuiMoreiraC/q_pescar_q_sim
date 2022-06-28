@@ -8,11 +8,10 @@ ALTER TABLE pescado
 -- de duas ou mais tabelas.
 
 DROP PROCEDURE IF EXISTS pescaUsario;
-DELIMITER $$
-$$
-CREATE PROCEDURE pescaUsario( p_idUser INT) 
-BEGIN
 
+DELIMITER $$
+CREATE PROCEDURE pescaUsario (p_idUser INT)
+BEGIN
 		SELECT p.id_pescado, 
 		CONCAT(u.nome, ' ', u.sobrenome) nomeUsuario,
 		p2.nome peixe, p.tamanho_cm,
@@ -29,8 +28,7 @@ BEGIN
 		INNER JOIN anzol a  ON e.id_anzol = a.id_anzol 
 		INNER JOIN iscas i  ON e.id_iscas = i.id_iscas
 		WHERE u.id_usuario = p_idUser;
-	
-END$$
+END $$
 DELIMITER ;
 
 
@@ -40,7 +38,6 @@ DELIMITER ;
 	
 -- 3. Crie uma view que contemple os principais dados do banco, de forma que
 -- qualquer usuário possa manipular os dados apenas pela view criada.
-	
-	
+
 	
 	
